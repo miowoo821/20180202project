@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.ViewGroup;
 
 import com.example.student.a20180202project.fragments.Activity_Fragment;
 import com.example.student.a20180202project.fragments.Change_Fragment;
@@ -53,4 +54,13 @@ public class viewpageradapter extends FragmentPagerAdapter {
         fragmentTitleList.add(title);
     }
 
+    @Override
+    public int getItemPosition(Object object) {
+        return super.getItemPosition(object);
+    }
+
+    @Override
+    public void setPrimaryItem(ViewGroup container, int position, Object object) {
+        super.setPrimaryItem(container, position, object);
+    }
 }

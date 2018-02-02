@@ -4,6 +4,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.student.a20180202project.adapter.viewpageradapter;
 import com.example.student.a20180202project.fragments.Activity_Fragment;
@@ -35,6 +36,17 @@ public class MainActivity extends AppCompatActivity {
         //重點程式碼//
 
         setup_viewpager(viewPager);
+        viewPager.setCurrentItem(2);//跳到第三個fragment(要先裝進去setup_viewpager跳轉才有用)
+//          用延遲的方法跳轉(刪)
+//        viewPager.postDelayed(new Runnable() {
+//
+//            @Override
+//            public void run() {
+//                viewPager.setCurrentItem(2);
+//                Log.d("RRRRRRRRRRRRRRRRRRR",String.valueOf(viewPager.getCurrentItem()));
+//            }
+//        }, 100);
+//        Log.d("RRRRRRRRRRRRRRRRRRR",String.valueOf(viewPager.getCurrentItem()));
     }
 
 
